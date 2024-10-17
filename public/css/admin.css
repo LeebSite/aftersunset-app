@@ -1,21 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word; /* Mencegah teks meluap */
+}
+
 body {
     font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
 }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Hindari margin bawaan */
+}
 
 .sidebar {
-    background-color: #2868bd; /* Sidebar background color */
+    background: linear-gradient(180deg, #0757be, #021744);
 }
 
 .brand-link {
-    padding: 1rem; /* Add padding for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px;
+}
+
+.brand-link img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .brand-text {
-    font-size: 1.5rem; /* Increase the size of the brand text */
+    font-size: 20px; /* Increase the size of the brand text */
 }
 
-.extra-small {
-    font-size: 0.75rem; /* Smaller font size for the subtitle */
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    background-color: #dddddd;
+    border-radius: 10px;
+}
+
+.user-panel img {
+    object-fit: cover;
+}
+
+.nav-icon {
+    margin-right: 8px;
 }
 
 .user-panel .info a {
@@ -28,28 +68,73 @@ body {
 }
 
 .main-header {
-    background-color: #e6e6e6;
+    background-color: #dcdcdc;
 }
 .sidebar-dark-primary {
-    background-color: #1e5398; /* Sidebar Color */
+    background-color: #062c7f; /* Sidebar Color */
 }
 .content-wrapper {
-    background-color: #f4f6f9;
-}
-.nav-link {
-    font-size: 14px;
-}
-.namaToko {
-    font-size: 1.5rem; /* Adjust size as needed */
-    margin-top: 10px; /* Adjust spacing as needed */
-    margin-bottom: 10px; /* Adjust spacing as needed */
-    font-weight: bold;
-    color: #da8e01;
-}
-/* Responsiveness */
-@media (max-width: 768px) {
-    .sidebar {
-        position: absolute; /* Mengubah posisi sidebar untuk responsivitas */
-    }
+    background-color: #f9f9ff;
+    max-width: 100%;   /* Batasi lebar sesuai viewport */
+    padding: 10px;      /* Tambahkan padding agar rapi */
+    margin: 0 auto;     /* Tengah di layar besar */
+    overflow-x: hidden; /* Hilangkan scroll horizontal */
 }
 
+
+/* Tabel */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;  /* Izinkan scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* Scroll lebih halus di mobile */
+}
+
+.table {
+    width: 100%; 
+    border-collapse: collapse; /* Gabungkan border */
+}
+
+.table th, .table td {
+    padding: 5px 10px; /* Spasi di dalam sel */
+    text-align: left; /* Rata kiri */
+    border: 1px solid #e2e1e1; /* Border tipis antar sel */
+    word-wrap: break-word; /* Potong teks panjang */
+    white-space: nowrap; /* Mencegah teks pecah */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+    }
+
+    .content-wrapper {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .navbar-nav, .nav-sidebar {
+        flex-wrap: wrap; /* Agar tidak melebihi lebar layar */
+        justify-content: space-around; /* Elemen dibagi rata */
+    }
+    
+    /* Teks dan Elemen yang Terlalu Panjang */
+    p, h1, h2, h3, h4, h5, h6 {
+        word-break: break-word; /* Potong teks panjang agar tidak meluap */
+        white-space: normal; /* Izinkan teks turun ke bawah */
+    }
+    .table th, .table td {
+        font-size: 9px; /* Kecilkan font untuk mobile */
+        padding: 3px 5px; /* Kurangi padding */
+    }
+
+    .table button {
+        font-size: 9px; /* Kecilkan font untuk tombol */
+        padding: 1px 3px; /* Kurangi padding tombol */
+    }
+
+    h1 {
+        font-size: 24px; /* Sesuaikan ukuran judul */
+    }
+}

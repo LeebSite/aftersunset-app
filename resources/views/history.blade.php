@@ -6,7 +6,7 @@
         <thead>
             <tr>
                 <th>Nama Pemesan</th>
-                <th>Pesanan</th>
+                <th>Menu</th>
                 <th>Nominal Uang</th>
                 <th>Kembalian</th>
                 <th>Total</th>
@@ -20,7 +20,17 @@
                 <td>Rp. 50.000</td>
                 <td>Rp. 43.000</td>
                 <td>Rp. 7.000</td>
-                <td><button class="btn btn-danger">Hapus</button></td>
+                <td><button class="btn btn-danger">Hapus</button> <button class="btn btn-warning">Edit</button></td>
+                
+            </tr>
+            <tr>
+                <td>Leeb</td>
+                <td>Chocolatos Coklat</td>
+                <td>Rp. 50.000</td>
+                <td>Rp. 43.000</td>
+                <td>Rp. 7.000</td>
+                <td><button class="btn btn-danger">Hapus</button> <button class="btn btn-warning">Edit</button></td>
+                
             </tr>
             <!-- Tambahkan baris lain untuk history lainnya -->
         </tbody>

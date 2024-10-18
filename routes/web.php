@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,3 +22,6 @@ Route::get('/order', function () {
 Route::get('/history', function () {
     return view('history');
 })->name('history');
+
+
+Route::resource('menu', MenuController::class);

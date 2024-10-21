@@ -9,10 +9,10 @@ class OrderDetail extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['order_id', 'menu_id', 'jumlah', 'subtotal'];
+    protected $fillable = ['order_id', 'nama_menu', 'harga', 'jumlah', 'subtotal'];
 
-    public function menu()
+    public function order()
     {
-        return $this->belongsTo(Menu::class);
+        return $this->belongsTo(Order::class);
     }
 }

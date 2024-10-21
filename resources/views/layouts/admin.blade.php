@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2.0/dist/css/adminlte.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" >
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 </head>
@@ -56,10 +58,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('order') }}" class="nav-link">
+                            <a href="{{ route('order.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-shopping-cart"></i>
-                                <p class="text-white">Pemesanan</p>
-                            </a>
+                                <p class="text-white">Pemesanan</p>                            
+                            </a>                            
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('history') }}" class="nav-link">
@@ -82,7 +84,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-address-book"></i>
-                                <p class="text-white">Karyawan</p>
+                                <p class="text-white">Kasir</p>
                             </a>
                         </li>
                     </ul>
@@ -96,7 +98,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Dashboard</h1>
+                            <h1 class="m-0">@yield('title')</h1>
                         </div>
                     </div>
                 </div>

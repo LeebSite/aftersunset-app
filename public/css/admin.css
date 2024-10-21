@@ -102,6 +102,30 @@ img {
     white-space: nowrap; /* Mencegah teks pecah */
 }
 
+/* Tampilan Card untuk Order */
+.menu-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .menu-col {
+        width: 25%; /* 4 kolom di desktop */
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-col {
+        width: 33.33%; /* 3 kolom di mobile */
+    }
+}
+
+
 @media (max-width: 768px) {
     .sidebar {
         position: absolute;
@@ -137,4 +161,5 @@ img {
     h1 {
         font-size: 24px; /* Sesuaikan ukuran judul */
     }
+   
 }
